@@ -1,0 +1,38 @@
+@* Passo 03 - Criar as Views *@
+@* Se Estou na View(index) de Produtos, qual sera a model
+que devo usar????? *@
+@model List<TechStoreMVC.Models.Categorias>
+
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<h1>
+    Lista de Categorias
+</h1>
+<table class="table table-striped">
+    @* Tipo de tabela acima com BootStrap *@
+    <thead>
+    @* cabçalho da tabela *@
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Situação</th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach(var produto in Model)
+        {
+        <tr>  
+            <td>@Categorias.Código</td>
+            <td>@Categorias.Nome</td>
+            <td>R$ @Categorias.Descrição.ToString("F2")</td>
+            <td>@Categorias.Situação</td>
+        </tr>
+        }
+    </tbody>
+    </table>
+    
+
+

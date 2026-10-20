@@ -18,7 +18,7 @@ namespace TechStoreMVC.Controllers
         {
             // Passo 5 - Objeto
             // Criar um objeto com vários produtos, por isso usamos um List
-            List<Produto> produtos = new List<Produto>
+            List<Produtos> produtos = new List<Produto>
             {
                 new Produto(1, "Mouse Gamer", 129.9m, 10),
                 new Produto(2, "Teclado Mecânico", 249.9m, 5),
