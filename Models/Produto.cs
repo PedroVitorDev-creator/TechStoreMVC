@@ -2,24 +2,18 @@ namespace TechStoreMVC.Models;
 
 public class Produto
 {
-    // Passo 01 - Criar as Models
-    //Atributos 
+    public int Id { get; set; }
+    public string Nome { get; set; } = string.Empty;
+    public decimal Preco { get; set; }
+    public int Estoque { get; set; }
 
-    public int Id {get; set;} // Get para obter um id = Identificador
+    // O MVC usa este construtor para receber o formulário.
+    // Tivemos de alterar o construtor para que tratassemos o erro ao editar
+    public Produto()
+    {
+    }
 
-    public string Nome {get; set;} // Set para definir um novo valor, atualizar e etc
-
-    public decimal Preco {get; set;}
-
-    public int Estoque {get; set;}
-    // Método Construtor - DeFine Valores iniciais desses atributos acima!
-
-    public Produto (
-        int id,
-        string nome,
-        decimal preco,
-        int estoque
-    )
+    public Produto(int id, string nome, decimal preco, int estoque)
     {
         Id = id;
         Nome = nome;
@@ -27,6 +21,3 @@ public class Produto
         Estoque = estoque;
     }
 }
-
-
-

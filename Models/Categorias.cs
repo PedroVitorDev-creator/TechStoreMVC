@@ -1,23 +1,18 @@
+namespace TechStoreMVC.Models
+{
     public class Categoria
     {
-        public int Id {get;set;}
+        public int Id { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public string Descricao { get; set; } = string.Empty;
 
-        public string Nome {get; set;}
+        public Categoria() { }
 
-        public string Descricao {get; set;}
-
-        public bool Ativa {get; set;}
-        
-    public Categoria (
-        int id,
-        string nome,
-        decimal descricao,
-        int ativa
-    )
-    {
-        Id = id;
-        Nome = nome;
-        Descricao = descricao;
-        Ativa = ativa;
+        public Categoria(int id, string nome, string descricao)
+        {
+            Id = id;
+            Nome = nome;
+            Descricao = descricao;
+        }
     }
-    }
+}
